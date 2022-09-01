@@ -1,6 +1,8 @@
 import axios from "axios";
+require('dotenv').config()
 
-const url = "http://localhost:5000/posts";
+
+const url = process.env.REACT_APP_API_URL;
 
 export const fetchPost = () => axios.get(url);
 export const createPost = (newPost) => axios.post(url, newPost);
