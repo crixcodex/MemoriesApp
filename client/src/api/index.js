@@ -2,7 +2,7 @@ import axios from "axios";
 require('dotenv').config()
 
 
-const url = process.env.REACT_APP_API_URL;
+const url = process.env.REACT_APP_API_URL + '/posts';
 
 export const fetchPost = () => axios.get(url);
 export const createPost = (newPost) => axios.post(url, newPost);
